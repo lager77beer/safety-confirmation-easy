@@ -9,13 +9,9 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+    //「一気に保存可能」なカラムを指定
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','phone','admin',
     ];
 
     /**
@@ -26,4 +22,18 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    
+    //userが持つsafeties
+    public function safeties()
+    {
+        return $this->hasMany(Safety::class);
+    } 
+    
+    //直近のsafety１つを取得
+    public function latestSafety()
+    {
+        return Safety::where('user_id',$this->id)->orderBy('updated_at', 'desc')->first();
+    } 
+    
+
 }
