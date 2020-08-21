@@ -25,6 +25,7 @@
             {!! Form::close() !!}
 
             <p class="mt-2">New user? {!! link_to_route('signup.get', '新規登録') !!}</p>
+            <p class="mt-4">使用方法? <a href="https://cacoo.com/diagrams/E9sJrAe5VIx1ljU7/38A2D" target="_blank">サイトマップ等</a></p>
         </div>
     </div>
 
