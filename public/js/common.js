@@ -137,11 +137,11 @@ const safetyTable = () => {
             { targets: 1, orderable: false }, //ソート機能外す
             { targets: 2, width: 130 },
             { targets: 3, width: 30 },
-            { targets: 4, width: 100 },
-            { targets: 5, width: 100 },
-            { targets: 5, orderable: false }, //ソート機能外す
-            { targets: 6, width: 80 },
-            { targets: 6, orderable: false } //ソート機能外す
+            { targets: 4, width: 200 }
+            //{ targets: 5, width: 100 },adminのみにしか存在しない列なので・・
+            //{ targets: 5, orderable: false }, //ソート機能外す
+            //{ targets: 6, width: 80 },
+            //{ targets: 6, orderable: false } //ソート機能外す
         ]
     });
 
@@ -199,7 +199,7 @@ const disasterTableSmapho = () => {
         // 件数のデフォルトの値を5にする
         displayLength: 5,  
         scrollX: true,
-        scrollY: 400,
+        //scrollY: 400,
         columnDefs: [
             //{ targets: 0, visible: true },
             { targets: 0, width: 50 },
@@ -242,7 +242,7 @@ const safetyTableSmapho = () => {
         // 件数のデフォルトの値を50にする
         displayLength: 50,
         scrollX: true,
-        scrollY: 500,
+        //scrollY: 500,
         columnDefs: [
             { targets: 0, width: 10 },
             { targets: 0, orderable: false }, //ソート機能外す
@@ -250,11 +250,11 @@ const safetyTableSmapho = () => {
             { targets: 1, orderable: false }, //ソート機能外す
             { targets: 2, width: 140 },
             { targets: 3, width: 30 },
-            { targets: 4, width: 100 },
-            { targets: 5, width: 120 },
-            { targets: 5, orderable: false }, //ソート機能外す
-            { targets: 6, width: 80 },
-            { targets: 6, orderable: false } //ソート機能外す
+            { targets: 4, width: 100 }
+            //{ targets: 5, width: 120 },adminのみにしか存在しない列なので・・
+            //{ targets: 5, orderable: false }, //ソート機能外す
+            //{ targets: 6, width: 80 },
+            //{ targets: 6, orderable: false } //ソート機能外す
         ]
     });
 
