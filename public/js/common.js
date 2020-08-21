@@ -260,7 +260,7 @@ const safetyTableSmapho = () => {
 
 
     // フィルタリングの実行
-    $('#select-safety').on('click', (e) => {
+    $('#select-safety').on('click change', (e) => {
         var selectedValue = $('#select-safety option:selected').val();
         table_safety.column(3).search(selectedValue).draw();
     });
