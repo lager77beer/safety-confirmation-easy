@@ -17,7 +17,7 @@ class SafetiesController extends Controller
      */
     public function indexByDisaster($disaster_id)
     {
-        //災害idで抽出したsafetiesを$safetiesにセット
+        //災害idで抽出したdisasterを$disasterにセット
         $disaster = Disaster::find($disaster_id);
         //災害idで抽出したSafety_userを$Safety_userにセット
         $safety_users = Safety_user::where('disaster_id', $disaster_id)->orderBy('updated_at', 'desc')->get();//ページネーションpaginate(10)はやめる

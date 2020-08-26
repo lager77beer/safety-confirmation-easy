@@ -73,7 +73,7 @@ const disasterTable = () => {
     // DataTables
     table_disaster = $("#disaster-table").DataTable({
     // 3列目を降順にする ( [ [ 列番号, 昇順降順 ], ... ] の形式) 
-        order: [ [ 3, "desc" ] ],
+        order: [ [ 2, "desc" ] ],
         // 状態を保存する機能をつける
         stateSave: true,
         // 件数切替の値を10～50の10刻みにする
@@ -191,7 +191,7 @@ const disasterTableSmapho = () => {
     // DataTables
     table_disaster = $("#disaster-table").DataTable({
     // 3列目を降順にする ( [ [ 列番号, 昇順降順 ], ... ] の形式) 
-        order: [ [ 3, "desc" ] ],
+        order: [ [ 2, "desc" ] ],
         // 状態を保存する機能をつける
         stateSave: true,
         // 件数切替の値を10～50の10刻みにする
@@ -260,6 +260,7 @@ const safetyTableSmapho = () => {
 
 
     // フィルタリングの実行
+    // スマホでのselectでは選択しただけではclickイベントが発生しないので、changeイベントも加えた。
     $('#select-safety').on('click change', (e) => {
         var selectedValue = $('#select-safety option:selected').val();
         table_safety.column(3).search(selectedValue).draw();
@@ -294,7 +295,7 @@ $('#btn-disaster-create').on('click', (e) => {
     var body ="";
 
     $(".mailto").each(function(i, emailTag) {
-        address += '"' + $(emailTag).text() + '",'; 
+        address += $(emailTag).text() + ","; 
         console.log("emailTag=" + $(emailTag).text() + '; ');
         console.log("address=" + address);
     });
